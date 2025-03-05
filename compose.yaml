@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  localstack:
+    image: localstack/localstack:latest
+    environment:
+      - SERVICES=s3,lambda,dynamodb,cloudwatch, iam
+      - DEBUG=1
+      - LAMBDA_EXECUTOR=docker-reuse
+    ports:
+      - "4566:4566" # Main API port
+      - "4571:4571" # Lambda API
