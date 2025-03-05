@@ -7,5 +7,5 @@ services:
       - DEBUG=1
       - LAMBDA_EXECUTOR=docker-reuse
     ports:
-      - "4566:4566" # Main API port
-      - "4571:4571" # Lambda API
+      - "4566:4566" 
+      - "4571:4571" 
